@@ -3,203 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barak Adakçılık | Gaziantep Adaklık ve Kurbanlık Kesim Satış</title>
-    <meta name="description" content="Gaziantep Barak Adakçılık - İslami usullere uygun, hijyenik ve ücretsiz kesim, paylama, paketleme ve vekaleten kurban kesim hizmeti.">
+    <title>Barak Adakçılık | Gaziantep</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        :root {
-            --primary: #1b4332;
-            --primary-dark: #081c15;
-            --accent: #2d6a4f;
-            --whatsapp: #25d366;
-            --light: #f8f9fa;
-            --dark: #212529;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-dark), var(--accent));
-            color: white;
-            padding: 50px 20px 40px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-top: 15px;
-        }
-
-        .container {
-            max-width: 750px;
-            margin: -25px auto 40px;
-            padding: 0 15px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-        }
-
-        .card h2 {
-            font-size: 1.3rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-            border-bottom: 2px solid #edf2f7;
-            padding-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin: 10px 0;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn:active {
-            transform: scale(0.98);
-        }
-
-        .btn-whatsapp {
-            background-color: var(--whatsapp);
-            color: white;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-call {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .features-list {
-            list-style: none;
-        }
-
-        .features-list li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 12px;
-            font-size: 0.98rem;
-        }
-
-        .features-list li i {
-            position: absolute;
-            left: 0;
-            top: 4px;
-            color: var(--accent);
-            font-size: 1.1rem;
-        }
-
-        .location-box {
-            background: #f1f5f9;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            margin-top: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            color: #6c757d;
-        }
+        :root { --primary: #1b4332; --accent: #d4af37; --whatsapp: #25d366; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333; }
+        header { background: var(--primary); color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--accent); }
+        .container { max-width: 500px; margin: 20px auto; padding: 20px; }
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 10px; margin-bottom: 20px; }
+        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 18px; margin: 10px 0; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.1rem; color: white; transition: 0.3s; }
+        .btn-wa { background: var(--whatsapp); }
+        .btn-map { background: #007bff; }
+        .btn-call { background: var(--primary); }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 15px; font-size: 1.05rem; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>BARAK ADAKÇILIK</h1>
-    <p>Gaziantep Adaklık & Kurbanlık Kesim ve Satış Merkezi</p>
-    <div class="badge"><i class="fa-solid fa-location-dot"></i> Muayene İstasyonu Civarı / Gaziantep</div>
+    <p>Gaziantep Adaklık & Kurbanlık</p>
 </header>
 
 <div class="container">
-
-    <!-- Hızlı İletişim Butonları -->
     <div class="card">
-        <div class="btn-group">
-            <!-- Numaranı 905551942780 şeklinde güncelle -->
-            <a href="https://wa.me/905551942780?text=Merhaba,%20adaklık%20fiyatları%20ve%20kesim%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
-                <i class="fa-brands fa-whatsapp fa-xl"></i> WhatsApp ile Bilgi & Fiyat Al
-            </a>
-            <a href="tel:+905551942780" class="btn btn-call">
-                <i class="fa-solid fa-phone"></i> Hemen Ara
-            </a>
-        </div>
+        <h2>İletişim</h2>
+        <!-- Numaranı buraya 905XXXXXXXXX şeklinde yaz -->
+        <a href="https://wa.me/905551942780" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp'tan Fiyat Al</a>
+        <a href="tel:+905551942780" class="btn btn-call"><i class="fas fa-phone"></i> Hemen Ara</a>
+        <!-- Harita Butonu -->
+        <a href="https://www.google.com/maps/search/Gaziantep+Araç+Muayene+İstasyonu" target="_blank" class="btn btn-map">
+            <i class="fas fa-map-marked-alt"></i> Yol Tarifi Al (Harita)
+        </a>
     </div>
 
-    <!-- Hizmetlerimiz -->
     <div class="card">
-        <h2><i class="fa-solid fa-shield-halved"></i> Hizmetlerimiz & Ayrıcalıklar</h2>
-        <ul class="features-list">
-            <li><i class="fa-solid fa-check-circle"></i> <strong>İslami Usullere Uygun Kesim:</strong> Hijyenik tesiste, dini vecibelere tam uygun ücretsiz kesim.</li>
-            <li><i class="fa-solid fa-check-circle"></i> <strong>Parçalama & Paketleme:</strong> İsteğe göre hisse, pay ve poşetleme işlemleri eksiksiz yapılır.</li>
-            <li><i class="fa-solid fa-check-circle"></i> <strong>Görüntülü / Vekaleten Kesim:</strong> Gelemeyen müşterilerimiz için video kayıtlı ve görüntülü arama eşliğinde vekalet alımı.</li>
-            <li><i class="fa-solid fa-check-circle"></i> <strong>Geniş Seçenek & Uygun Fiyat:</strong> Her bütçeye uygun sağlıklı toklu, koç ve koyun çeşitleri.</li>
+        <h2>Hizmetlerimiz</h2>
+        <ul>
+            <li><i class="fas fa-check-circle" style="color:green;"></i> İslami usullere uygun kesim</li>
+            <li><i class="fas fa-check-circle" style="color:green;"></i> Ücretsiz parçalama & paketleme</li>
+            <li><i class="fas fa-check-circle" style="color:green;"></i> Görüntülü vekaletli kesim</li>
+            <li><i class="fas fa-check-circle" style="color:green;"></i> Adrese teslim imkanı</li>
         </ul>
     </div>
-
-    <!-- Konum Bilgisi -->
-    <div class="card">
-        <h2><i class="fa-solid fa-map-location-dot"></i> Tesis & Ulaşım</h2>
-        <p>Gaziantep araç muayene istasyonu civarındaki tesisimize gelerek canlı küçükbaşları yerinde seçebilir veya kesim alanımızı inceleyebilirsiniz.</p>
-        <div class="location-box">
-            <strong>Adres Özeti:</strong> Muayene İstasyonu Civarı, Şehitkamil / Gaziantep
-        </div>
-    </div>
-
 </div>
-
-<footer>
-    © Barak Adakçılık - Gaziantep. Tüm Hakları Saklıdır.
-</footer>
 
 </body>
 </html>
