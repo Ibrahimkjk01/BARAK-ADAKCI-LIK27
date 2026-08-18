@@ -12,9 +12,9 @@
             --primary: #0a2f23;
             --primary-light: #14533d;
             --accent: #d4af37;
-            --accent-glow: rgba(212, 175, 55, 0.35);
             --whatsapp: #25d366;
             --whatsapp-glow: rgba(37, 211, 102, 0.4);
+            --instagram: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             --bg-page: #f8faf9;
             --card-bg: #ffffff;
             --text-main: #1e293b;
@@ -36,7 +36,6 @@
             overflow-x: hidden;
         }
 
-        /* --- Keyframe Animasyonları --- */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(25px); }
             to { opacity: 1; transform: translateY(0); }
@@ -46,11 +45,6 @@
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
             70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        @keyframes goldShimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
         }
 
         @keyframes float {
@@ -63,7 +57,6 @@
             50% { opacity: 0.4; transform: scale(0.8); }
         }
 
-        /* --- Üst Menü (Glassmorphism) --- */
         nav {
             background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(12px);
@@ -105,11 +98,6 @@
             transition: all 0.3s ease;
         }
 
-        .nav-cta:hover {
-            transform: scale(1.05);
-        }
-
-        /* --- Hero Bölümü --- */
         .hero {
             background: radial-gradient(circle at 50% 20%, #175e46 0%, var(--primary) 70%);
             color: white;
@@ -191,13 +179,18 @@
             box-shadow: 0 8px 20px var(--whatsapp-glow);
         }
 
+        .btn-ig-hero {
+            background: var(--instagram);
+            color: white;
+            box-shadow: 0 6px 16px rgba(220, 39, 67, 0.3);
+        }
+
         .btn-call-hero {
             background: #ffffff;
             color: var(--primary);
             box-shadow: 0 6px 16px rgba(0,0,0,0.1);
         }
 
-        /* --- İstatistik Sayacı --- */
         .stats-wrap {
             max-width: 560px;
             margin: -30px auto 30px;
@@ -230,7 +223,6 @@
             margin-top: 2px;
         }
 
-        /* --- İçerik Konteyneri --- */
         .container {
             max-width: 560px;
             margin: 0 auto;
@@ -267,7 +259,6 @@
             color: var(--accent);
         }
 
-        /* Hizmet Izgarası */
         .grid-services {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -307,7 +298,6 @@
             color: var(--text-muted);
         }
 
-        /* Sıkça Sorulan Sorular (Accordion) */
         .faq-item {
             border: 1px solid #e2e8f0;
             border-radius: 10px;
@@ -358,7 +348,6 @@
             color: var(--accent);
         }
 
-        /* Konum ve Yol Tarifi Butonu */
         .location-info {
             background: #f8fafc;
             border-left: 4px solid var(--accent);
@@ -388,7 +377,6 @@
             transform: scale(0.97);
         }
 
-        /* Yüzen WhatsApp Butonu (Floating Pulse) */
         .floating-wa {
             position: fixed;
             bottom: 85px;
@@ -408,7 +396,6 @@
             animation: pulseGlow 2s infinite, float 3s ease-in-out infinite;
         }
 
-        /* Alt Sabit İletişim Çubuğu */
         .sticky-footer {
             position: fixed;
             bottom: 0;
@@ -446,11 +433,20 @@
             font-size: 0.8rem;
             color: #94a3b8;
         }
+
+        .footer-ig {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #e1306c;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 8px;
+        }
     </style>
 </head>
 <body>
 
-<!-- Üst Navigasyon -->
 <nav>
     <div class="nav-brand">
         <i class="fa-solid fa-kaaba"></i> BARAK <span>ADAKÇILIK</span>
@@ -460,7 +456,6 @@
     </a>
 </nav>
 
-<!-- Hero / Tanıtım -->
 <div class="hero">
     <div class="hero-badge">
         <span class="live-dot"></span> Gaziantep Güvenilir Kesim Merkezi
@@ -472,13 +467,15 @@
         <a href="https://wa.me/905551942780?text=Merhaba,%20adaklık%20fiyatları%20ve%20kesim%20hakkında%20bilgi%20almak%20istiyorum." class="btn-action btn-wa-hero" target="_blank">
             <i class="fa-brands fa-whatsapp fa-xl"></i> WhatsApp'tan Fiyat Al
         </a>
+        <a href="https://www.instagram.com/barakadakcilik/" class="btn-action btn-ig-hero" target="_blank">
+            <i class="fa-brands fa-instagram fa-xl"></i> Instagram'da Takip Et
+        </a>
         <a href="tel:+905551942780" class="btn-action btn-call-hero">
             <i class="fa-solid fa-phone"></i> Hemen Ara: 0555 194 27 80
         </a>
     </div>
 </div>
 
-<!-- İstatistik Sayaçları -->
 <div class="stats-wrap">
     <div class="stats-card">
         <div class="stat-box">
@@ -498,7 +495,6 @@
 
 <div class="container">
 
-    <!-- Hizmetlerimiz -->
     <div class="section-card">
         <div class="card-header">
             <i class="fa-solid fa-star"></i> Tesis Hizmetlerimiz
@@ -527,7 +523,6 @@
         </div>
     </div>
 
-    <!-- Sıkça Sorulan Sorular (İnteraktif Akordiyon) -->
     <div class="section-card">
         <div class="card-header">
             <i class="fa-solid fa-circle-question"></i> Sıkça Sorulan Sorular
@@ -564,7 +559,6 @@
         </div>
     </div>
 
-    <!-- Konum ve Harita Navigasyonu -->
     <div class="section-card">
         <div class="card-header">
             <i class="fa-solid fa-location-dot"></i> Tesis Konumu & Yol Tarifi
@@ -580,12 +574,10 @@
 
 </div>
 
-<!-- Yüzen Animasyonlu WhatsApp Butonu -->
 <a href="https://wa.me/905551942780?text=Merhaba,%20fiyatlar%20hakkında%20bilgi%20almak%20istiyorum." class="floating-wa" target="_blank" title="WhatsApp Destek">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<!-- Sabit Alt Bar -->
 <div class="sticky-footer">
     <a href="tel:+905551942780" class="s-call">
         <i class="fa-solid fa-phone"></i> Hemen Ara
@@ -598,9 +590,11 @@
 <footer>
     <p>© Barak Adakçılık - Gaziantep</p>
     <p>Adaklık, Akika, Şükür ve Kurbanlık Kesim Satış Merkezi</p>
+    <a href="https://www.instagram.com/barakadakcilik/" target="_blank" class="footer-ig">
+        <i class="fa-brands fa-instagram"></i> @barakadakcilik Instagram Profilimiz
+    </a>
 </footer>
 
-<!-- Accordion JS -->
 <script>
     function toggleFaq(element) {
         const isActive = element.classList.contains('active');
