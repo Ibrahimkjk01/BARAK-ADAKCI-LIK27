@@ -14,6 +14,26 @@
     <!-- Font Awesome İkon Kütüphanesi -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Google Analytics (gtag.js) & Etkinlik Takip Kodu -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HT7YF22HDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HT7YF22HDP');
+
+      // Tıklama Takip Fonksiyonu
+      function trackClick(category, actionLabel) {
+        if (typeof gtag === 'function') {
+          gtag('event', 'button_click', {
+            'event_category': category,
+            'event_label': actionLabel
+          });
+        }
+      }
+    </script>
+
     <style>
         :root {
             --top-dark: #0f1330;
@@ -54,7 +74,7 @@
             padding: 0 20px;
         }
 
-        /* --- 1. EN ÜST BİLGİ BARI (TOP BAR) --- */
+        /* --- 1. TOP BAR --- */
         .top-bar {
             background-color: var(--top-dark);
             color: #d1d5db;
@@ -94,7 +114,7 @@
             color: var(--accent-red);
         }
 
-        /* --- 2. ANA HEADER (LOGO & WIDGETLAR) --- */
+        /* --- 2. MAIN HEADER --- */
         .main-header {
             background-color: var(--main-navy);
             color: white;
@@ -192,7 +212,7 @@
             transform: translateY(-2px);
         }
 
-        /* --- 3. BEYAZ NAVBAR MENÜSÜ --- */
+        /* --- 3. NAVBAR --- */
         .navbar {
             background-color: #ffffff;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -224,7 +244,6 @@
             font-weight: 600;
             font-size: 0.92rem;
             transition: color 0.2s ease;
-            position: relative;
         }
 
         .nav-links li a:hover, .nav-links li a.active {
@@ -258,7 +277,7 @@
             transform: translateY(-2px);
         }
 
-        /* --- 4. BANNER / HERO ALANI --- */
+        /* --- 4. BANNER / HERO --- */
         .page-banner {
             background: linear-gradient(rgba(15, 19, 48, 0.8), rgba(15, 19, 48, 0.85)), 
                         url('https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -310,7 +329,7 @@
             text-decoration: none;
         }
 
-        /* --- 5. ANA İÇERİK & HİZMETLER --- */
+        /* --- 5. CONTENT GRID --- */
         .main-content {
             padding: 55px 0 70px;
             background-color: var(--bg-light);
@@ -427,7 +446,7 @@
             margin-bottom: 18px;
         }
 
-        /* --- 6. KURUMSAL BÜYÜK FOOTER (EKRAN GÖRÜNTÜSÜNDEKİ) --- */
+        /* --- 6. CORPORATE FOOTER --- */
         .corporate-footer {
             background: linear-gradient(rgba(10, 13, 33, 0.94), rgba(10, 13, 33, 0.98)),
                         url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -452,7 +471,6 @@
             padding-bottom: 10px;
         }
 
-        /* Kırmızı Çizgili Başlık Vurgusu */
         .footer-col h3::after {
             content: '';
             position: absolute;
@@ -479,10 +497,6 @@
             display: inline-flex;
             align-items: center;
             gap: 4px;
-        }
-
-        .footer-col .read-more:hover {
-            text-decoration: underline;
         }
 
         .footer-menu {
@@ -579,7 +593,6 @@
             transform: translateY(-2px);
         }
 
-        /* --- 7. YUKARI ÇIK & SOL SABİT BUTONLAR --- */
         .btn-scroll-top {
             width: 44px;
             height: 44px;
@@ -599,6 +612,7 @@
             transform: translateY(-3px);
         }
 
+        /* --- 7. SABİT ALT BUTONLAR --- */
         .fixed-call-tab {
             position: fixed;
             bottom: 75px;
@@ -645,7 +659,6 @@
             transform: scale(1.05);
         }
 
-        /* Mobil Responsive */
         @media (max-width: 900px) {
             .content-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -658,22 +671,22 @@
 </head>
 <body>
 
-<!-- 1. EN ÜST BİLGİ BARI -->
+<!-- 1. TOP BAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
         <div class="top-left">
-            <a href="tel:+905303712778"><i class="fa-solid fa-phone"></i> 0530 371 27 78</a>
+            <a href="tel:+905303712778" onclick="trackClick('Iletisim', 'TopBar Telefon Aramasi')"><i class="fa-solid fa-phone"></i> 0530 371 27 78</a>
             <a href="mailto:info@barakadakcilik.com"><i class="fa-solid fa-envelope"></i> info@barakadakcilik.com</a>
         </div>
         <div class="top-right">
-            <a href="tel:+905303712778"><i class="fa-solid fa-headset"></i> Bizi Arayın</a>
-            <a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank"><i class="fa-solid fa-location-dot"></i> İletişim / Harita</a>
+            <a href="tel:+905303712778" onclick="trackClick('Iletisim', 'TopBar Bizi Arayin')"><i class="fa-solid fa-headset"></i> Bizi Arayın</a>
+            <a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" onclick="trackClick('Konum', 'TopBar Harita Linki')"><i class="fa-solid fa-location-dot"></i> İletişim / Harita</a>
             <span>🇹🇷 TR</span>
         </div>
     </div>
 </div>
 
-<!-- 2. ANA HEADER -->
+<!-- 2. MAIN HEADER -->
 <header class="main-header">
     <div class="container main-header-inner">
         <a href="#" class="logo-box">
@@ -683,7 +696,7 @@
         </a>
 
         <div class="header-widgets">
-            <a href="https://wa.me/905303712778?text=Merhaba,%20adaklık%20fiyatları%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="info-widget">
+            <a href="https://wa.me/905303712778?text=Merhaba,%20adaklık%20fiyatları%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" onclick="trackClick('Iletisim', 'Header WhatsApp Kutusu')" class="info-widget">
                 <div class="info-widget-icon">
                     <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
                 </div>
@@ -703,14 +716,14 @@
                 </div>
             </div>
 
-            <a href="https://wa.me/905303712778" target="_blank" class="btn-header-cta">
+            <a href="https://wa.me/905303712778" target="_blank" onclick="trackClick('Iletisim', 'Header Bize Ulasin Butonu')" class="btn-header-cta">
                 Bize Ulaşın <i class="fa-solid fa-angle-right"></i>
             </a>
         </div>
     </div>
 </header>
 
-<!-- 3. NAVBAR MENÜSÜ -->
+<!-- 3. NAVBAR -->
 <nav class="navbar">
     <div class="container navbar-inner">
         <ul class="nav-links">
@@ -719,18 +732,18 @@
             <li><a href="#hizmetler">Hizmetlerimiz <i class="fa-solid fa-angle-down" style="font-size: 0.75rem;"></i></a></li>
             <li><a href="#hizmetler">Adaklık Satışı</a></li>
             <li><a href="#hizmetler">Kurbanlık Satışı</a></li>
-            <li><a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank">İletişim & Konum</a></li>
+            <li><a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" onclick="trackClick('Konum', 'Navbar Konum Linki')">İletişim & Konum</a></li>
         </ul>
         <div class="nav-socials">
-            <a href="https://www.instagram.com/barakadakcilik/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.me/905303712778" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="tel:+905303712778" title="Telefon"><i class="fa-solid fa-phone"></i></a>
-            <a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" title="Harita"><i class="fa-solid fa-location-dot"></i></a>
+            <a href="https://www.instagram.com/barakadakcilik/" target="_blank" onclick="trackClick('Sosyal Medya', 'Navbar Instagram')" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/905303712778" target="_blank" onclick="trackClick('Iletisim', 'Navbar WhatsApp')" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+905303712778" onclick="trackClick('Iletisim', 'Navbar Telefon')" title="Telefon"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" onclick="trackClick('Konum', 'Navbar Harita')" title="Harita"><i class="fa-solid fa-location-dot"></i></a>
         </div>
     </div>
 </nav>
 
-<!-- 4. BANNER BÖLÜMÜ -->
+<!-- 4. BANNER -->
 <section class="page-banner">
     <div class="container banner-inner">
         <div class="banner-title">
@@ -744,7 +757,7 @@
     </div>
 </section>
 
-<!-- 5. İÇERİK VE KATEGORİLER -->
+<!-- 5. CONTENT GRID -->
 <section class="main-content" id="hizmetler">
     <div class="container content-grid">
         
@@ -769,18 +782,18 @@
                     <h3><i class="fa-solid fa-bars bar-icon" style="color:var(--accent-red);"></i> Hizmet Kategorileri</h3>
                 </div>
                 <ul class="category-menu">
-                    <li><a href="https://wa.me/905303712778">Adaklık Kurban Satışı <i class="fa-solid fa-arrow-right"></i></a></li>
-                    <li><a href="https://wa.me/905303712778">Akika Kurbanı <i class="fa-solid fa-arrow-right"></i></a></li>
-                    <li><a href="https://wa.me/905303712778">Şükür Kurbanı <i class="fa-solid fa-arrow-right"></i></a></li>
-                    <li><a href="https://wa.me/905303712778">Görüntülü Vekaletli Kesim <i class="fa-solid fa-arrow-right"></i></a></li>
-                    <li><a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank">Canlı Hayvan Seçimi <i class="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="https://wa.me/905303712778" onclick="trackClick('Kategori', 'Adaklik Satisi Linki')">Adaklık Kurban Satışı <i class="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="https://wa.me/905303712778" onclick="trackClick('Kategori', 'Akika Linki')">Akika Kurbanı <i class="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="https://wa.me/905303712778" onclick="trackClick('Kategori', 'Sukur Linki')">Şükür Kurbanı <i class="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="https://wa.me/905303712778" onclick="trackClick('Kategori', 'Vekalet Linki')">Görüntülü Vekaletli Kesim <i class="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" onclick="trackClick('Konum', 'Canli Secim Harita Linki')">Canlı Hayvan Seçimi <i class="fa-solid fa-arrow-right"></i></a></li>
                 </ul>
             </div>
 
             <div class="sidebar-contact-box">
                 <h4>Canlı Hayvanınızı Seçin</h4>
                 <p>Tesisimize gelerek veya WhatsApp'tan görüntülü arayarak hayvanınızı canlı görebilirsiniz.</p>
-                <a href="https://wa.me/905303712778" target="_blank" class="btn-header-cta" style="width: 100%; justify-content: center;">
+                <a href="https://wa.me/905303712778" target="_blank" onclick="trackClick('Iletisim', 'Sidebar WhatsApp Fiyat Al')" class="btn-header-cta" style="width: 100%; justify-content: center;">
                     <i class="fa-brands fa-whatsapp"></i> Fiyat & Bilgi Al
                 </a>
             </div>
@@ -789,7 +802,7 @@
     </div>
 </section>
 
-<!-- 6. KURUMSAL FOOTER BÖLÜMÜ -->
+<!-- 6. FOOTER -->
 <footer class="corporate-footer" id="hakkimizda">
     <div class="container">
         <div class="footer-grid">
@@ -800,7 +813,7 @@
                 <p>
                     Gaziantep'te uzun yıllardır siz saygıdeğer müşterilerimize dürüstlük ve hijyen anlayışıyla hizmet sunmaktayız. Güler yüzlü kasap kadromuzla, İslami usullere tam uygun şekilde adak ve kurbanlarınız kesilip ücretsiz paketlenir.
                 </p>
-                <a href="https://wa.me/905303712778" class="read-more">Devamını Oku <i class="fa-solid fa-angle-right"></i></a>
+                <a href="https://wa.me/905303712778" onclick="trackClick('Iletisim', 'Footer Devamini Oku')" class="read-more">Devamını Oku <i class="fa-solid fa-angle-right"></i></a>
             </div>
 
             <div class="footer-col">
@@ -808,8 +821,8 @@
                 <ul class="footer-menu">
                     <li><a href="#"><i class="fa-solid fa-circle-check"></i> Hakkımızda</a></li>
                     <li><a href="#hizmetler"><i class="fa-solid fa-circle-check"></i> Hizmetlerimiz</a></li>
-                    <li><a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank"><i class="fa-solid fa-circle-check"></i> İletişim & Konum</a></li>
-                    <li><a href="https://www.instagram.com/barakadakcilik/" target="_blank"><i class="fa-solid fa-circle-check"></i> Instagram Hesabımız</a></li>
+                    <li><a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" onclick="trackClick('Konum', 'Footer Harita')"><i class="fa-solid fa-circle-check"></i> İletişim & Konum</a></li>
+                    <li><a href="https://www.instagram.com/barakadakcilik/" target="_blank" onclick="trackClick('Sosyal Medya', 'Footer Instagram')"><i class="fa-solid fa-circle-check"></i> Instagram Hesabımız</a></li>
                 </ul>
             </div>
 
@@ -846,10 +859,10 @@
             <p>Copyright © 2026 Barak Adakçılık. Tüm Hakları Saklıdır.</p>
             
             <div class="footer-bottom-socials">
-                <a href="https://www.instagram.com/barakadakcilik/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/905303712778" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="tel:+905303712778" title="Telefon"><i class="fa-solid fa-phone"></i></a>
-                <a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" title="Konum"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="https://www.instagram.com/barakadakcilik/" target="_blank" onclick="trackClick('Sosyal Medya', 'Alt Bar Instagram')" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/905303712778" target="_blank" onclick="trackClick('Iletisim', 'Alt Bar WhatsApp')" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="tel:+905303712778" onclick="trackClick('Iletisim', 'Alt Bar Telefon')" title="Telefon"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" onclick="trackClick('Konum', 'Alt Bar Harita')" title="Konum"><i class="fa-solid fa-location-dot"></i></a>
             </div>
 
             <a href="#" class="btn-scroll-top" title="Yukarı Çık">
@@ -859,12 +872,12 @@
     </div>
 </footer>
 
-<!-- 7. SOL ALTA SABİTLENMİŞ BUTONLAR -->
-<a href="tel:+905303712778" class="fixed-call-tab">
+<!-- 7. SABİT ALT BUTONLAR -->
+<a href="tel:+905303712778" onclick="trackClick('Iletisim', 'Sabit Kırmızı Telefon Butonu')" class="fixed-call-tab">
     <i class="fa-solid fa-phone"></i> 0530 371 27 78
 </a>
 
-<a href="https://wa.me/905303712778?text=Merhaba,%20adaklık%20fiyatları%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="fixed-wa-tab">
+<a href="https://wa.me/905303712778?text=Merhaba,%20adaklık%20fiyatları%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" onclick="trackClick('Iletisim', 'Sabit Yesil WhatsApp Butonu')" class="fixed-wa-tab">
     <i class="fa-brands fa-whatsapp fa-lg"></i> WhatsApp ile İletişime Geç
 </a>
 
