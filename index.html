@@ -7,129 +7,218 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #1a4d3a;
+            --primary: #12372A;
+            --primary-light: #1b4d3e;
             --accent: #D4AF37;
             --whatsapp: #25D366;
-            --bg-color: #FdfcF9;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', serif; }
-        body { background-color: var(--bg-color); }
-
-        /* Üst Başlık - Doğru Sürü Görseli */
-        .hero {
-            background: linear-gradient(rgba(10, 40, 30, 0.9), rgba(20, 60, 40, 0.9)), 
-                        url('https://images.unsplash.com/photo-1518608226-9d4ed5a0443a?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--accent);
-        }
-        .hero h1 { font-size: 2.5rem; letter-spacing: 2px; }
-
-        .container { max-width: 600px; margin: -40px auto 40px; padding: 0 15px; }
-        .card { background: white; border-radius: 20px; padding: 25px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
-
-        /* Vitrin Görseli - Doğru Küçükbaş Hayvan */
-        .showcase-img {
-            width: 100%; height: 230px; object-fit: cover; border-radius: 15px; margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15); border: 4px solid white;
+            --bg-color: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --text-dark: #2B2D42;
         }
 
-        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 18px; margin: 10px 0; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
-        .btn-wa { background-color: var(--whatsapp); color: white; }
-        .btn-call { background-color: var(--primary); color: white; }
-        .btn-map { background-color: white; color: var(--primary); border: 1px solid #ddd; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 45px 20px 35px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .header-icon {
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            color: #E0E7E3;
+        }
+
+        .container {
+            max-width: 550px;
+            margin: -20px auto 40px;
+            padding: 0 16px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            border: 1px solid #EEF2F0;
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #F0F4F2;
+            padding-bottom: 8px;
+        }
+
+        .badge-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #E8F5E9;
+            color: #2E7D32;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.15s ease;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-call {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-map {
+            background-color: #F1F5F9;
+            color: var(--primary);
+            border: 1px solid #CBD5E1;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .service-list li i {
+            color: var(--accent);
+            margin-top: 3px;
+        }
+
+        .address-box {
+            background: #F8FAFC;
+            border-left: 4px solid var(--accent);
+            padding: 12px 14px;
+            border-radius: 6px;
+            font-size: 0.92rem;
+            color: #475569;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #94A3B8;
+        }
     </style>
 </head>
 <body>
 
-<div class="hero">
+<div class="header">
+    <div class="header-icon"><i class="fa-solid fa-kaaba"></i></div>
     <h1>BARAK ADAKÇILIK</h1>
-    <p><i class="fas fa-certificate" style="color:var(--accent);"></i> GAZİANTEP GÜVENİLİR ADAKLIK & KURBANLIK</p>
+    <p>Gaziantep Adaklık ve Kurbanlık Kesim Merkezi</p>
 </div>
 
 <div class="container">
+
+    <!-- İletişim Kartı -->
     <div class="card">
-        <!-- Vitrin Fotoğrafı (Kesinlikle Doğru: Küçükbaş/Koyun) -->
-        <img src="https://images.unsplash.com/photo-1507111003668-3e4b77f917df?auto=format&fit=crop&w=800&q=80" alt="Küçükbaş Hayvan" class="showcase-img">
-        
-        <div class="btn-box">
-            <a href="https://wa.me/905551942780" class="btn btn-wa" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp'tan Bilgi & Fiyat Al
+        <div class="badge-status">
+            <i class="fa-solid fa-clock"></i> Haftanın 7 Günü Açık
+        </div>
+        <div class="btn-group">
+            <a href="https://wa.me/905551942780?text=Merhaba,%20adaklık%20fiyatları%20ve%20kesim%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp fa-xl"></i> WhatsApp ile Bilgi & Fiyat Al
             </a>
             <a href="tel:+905551942780" class="btn btn-call">
-                <i class="fas fa-phone"></i> Hemen Ara: 0555 194 27 80
+                <i class="fa-solid fa-phone"></i> Hemen Ara: 0555 194 27 80
             </a>
             <a href="https://www.google.com/maps/search/Gaziantep+Araç+Muayene+İstasyonu" target="_blank" class="btn btn-map">
-                <i class="fas fa-map-marker-alt"></i> Haritada Yol Tarifi Al
+                <i class="fa-solid fa-map-location-dot"></i> Haritada Yol Tarifi Al
             </a>
         </div>
     </div>
-</div>
 
-</body>
-</html><!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barak Adakçılık | Gaziantep Adaklık ve Kurbanlık</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #1a4d3a;
-            --accent: #D4AF37;
-            --whatsapp: #25D366;
-            --bg-color: #FdfcF9;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', serif; }
-        body { background-color: var(--bg-color); }
-
-        /* Üst Başlık - Doğru Sürü Görseli */
-        .hero {
-            background: linear-gradient(rgba(10, 40, 30, 0.9), rgba(20, 60, 40, 0.9)), 
-                        url('https://images.unsplash.com/photo-1518608226-9d4ed5a0443a?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--accent);
-        }
-        .hero h1 { font-size: 2.5rem; letter-spacing: 2px; }
-
-        .container { max-width: 600px; margin: -40px auto 40px; padding: 0 15px; }
-        .card { background: white; border-radius: 20px; padding: 25px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
-
-        /* Vitrin Görseli - Doğru Küçükbaş Hayvan */
-        .showcase-img {
-            width: 100%; height: 230px; object-fit: cover; border-radius: 15px; margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15); border: 4px solid white;
-        }
-
-        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 18px; margin: 10px 0; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
-        .btn-wa { background-color: var(--whatsapp); color: white; }
-        .btn-call { background-color: var(--primary); color: white; }
-        .btn-map { background-color: white; color: var(--primary); border: 1px solid #ddd; }
-    </style>
-</head>
-<body>
-
-<div class="hero">
-    <h1>BARAK ADAKÇILIK</h1>
-    <p><i class="fas fa-certificate" style="color:var(--accent);"></i> GAZİANTEP GÜVENİLİR ADAKLIK & KURBANLIK</p>
-</div>
-
-<div class="container">
+    <!-- Hizmetler Kartı -->
     <div class="card">
-        <!-- Vitrin Fotoğrafı (Kesinlikle Doğru: Küçükbaş/Koyun) -->
-        <img src="https://images.unsplash.com/photo-1507111003668-3e4b77f917df?auto=format&fit=crop&w=800&q=80" alt="Küçükbaş Hayvan" class="showcase-img">
-        
-        <div class="btn-box">
-            <a href="https://wa.me/905551942780" class="btn btn-wa" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp'tan Bilgi & Fiyat Al
-            </a>
-            <a href="tel:+905551942780" class="btn btn-call">
-                <i class="fas fa-phone"></i> Hemen Ara: 0555 194 27 80
-            </a>
-            <a href="https://www.google.com/maps/search/Gaziantep+Araç+Muayene+İstasyonu" target="_blank" class="btn btn-map">
-                <i class="fas fa-map-marker-alt"></i> Haritada Yol Tarifi Al
-            </a>
+        <h2><i class="fa-solid fa-shield-halved" style="color:var(--accent);"></i> Hizmetlerimiz</h2>
+        <ul class="service-list">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>İslami Usullere Uygun Kesim:</strong> Hijyenik ortamda dini şartlara tam uygun ücretsiz kesim.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Parçalama & Paketleme:</strong> Paylama, hisse ayırma ve temiz paketleme.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Görüntülü Vekalet:</strong> Gelemeyen müşterilerimiz için video kayıtlı kesim imkanı.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Küçükbaş Çeşitleri:</strong> Toklu, koç ve koyun seçenekleri.</li>
+        </ul>
+    </div>
+
+    <!-- Konum Kartı -->
+    <div class="card">
+        <h2><i class="fa-solid fa-location-dot" style="color:var(--accent);"></i> Adres & Ulaşım</h2>
+        <div class="address-box">
+            Araç Muayene İstasyonu Civarı, Şehitkamil / Gaziantep
         </div>
     </div>
+
 </div>
+
+<footer>
+    © Barak Adakçılık - Gaziantep. Tüm Hakları Saklıdır.
+</footer>
 
 </body>
 </html>
