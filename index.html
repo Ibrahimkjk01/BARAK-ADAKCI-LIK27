@@ -11,6 +11,7 @@
             --primary-light: #1b4d3e;
             --accent: #D4AF37;
             --whatsapp: #25D366;
+            --map-blue: #1a73e8;
             --bg-color: #F8F9FA;
             --card-bg: #FFFFFF;
             --text-dark: #2B2D42;
@@ -32,15 +33,9 @@
         .header {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            padding: 45px 20px 35px;
+            padding: 40px 20px 30px;
             text-align: center;
             border-bottom: 4px solid var(--accent);
-        }
-
-        .header-icon {
-            font-size: 2.8rem;
-            color: var(--accent);
-            margin-bottom: 10px;
         }
 
         .header h1 {
@@ -55,7 +50,7 @@
         }
 
         .container {
-            max-width: 550px;
+            max-width: 520px;
             margin: -20px auto 40px;
             padding: 0 16px;
         }
@@ -63,19 +58,19 @@
         .card {
             background: var(--card-bg);
             border-radius: 16px;
-            padding: 24px;
+            padding: 22px;
             margin-bottom: 18px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.06);
             border: 1px solid #EEF2F0;
         }
 
         .card h2 {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--primary);
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             border-bottom: 2px solid #F0F4F2;
             padding-bottom: 8px;
         }
@@ -90,7 +85,7 @@
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .btn-group {
@@ -128,9 +123,9 @@
         }
 
         .btn-map {
-            background-color: #F1F5F9;
-            color: var(--primary);
-            border: 1px solid #CBD5E1;
+            background-color: var(--map-blue);
+            color: white;
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.25);
         }
 
         .service-list {
@@ -141,8 +136,8 @@
             display: flex;
             align-items: flex-start;
             gap: 10px;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-size: 0.92rem;
         }
 
         .service-list li i {
@@ -153,10 +148,11 @@
         .address-box {
             background: #F8FAFC;
             border-left: 4px solid var(--accent);
-            padding: 12px 14px;
+            padding: 14px;
             border-radius: 6px;
             font-size: 0.92rem;
-            color: #475569;
+            color: #334155;
+            margin-bottom: 12px;
         }
 
         footer {
@@ -170,17 +166,16 @@
 <body>
 
 <div class="header">
-    <div class="header-icon"><i class="fa-solid fa-kaaba"></i></div>
     <h1>BARAK ADAKÇILIK</h1>
-    <p>Gaziantep Adaklık ve Kurbanlık Kesim Merkezi</p>
+    <p>Gaziantep Adaklık ve Kurbanlık Kesim Satış Merkezi</p>
 </div>
 
 <div class="container">
 
-    <!-- İletişim Kartı -->
+    <!-- İletişim Butonları -->
     <div class="card">
         <div class="badge-status">
-            <i class="fa-solid fa-clock"></i> Haftanın 7 Günü Açık
+            <i class="fa-solid fa-clock"></i> Haftanın 7 Günü Hizmetinizdeyiz
         </div>
         <div class="btn-group">
             <a href="https://wa.me/905551942780?text=Merhaba,%20adaklık%20fiyatları%20ve%20kesim%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
@@ -189,29 +184,32 @@
             <a href="tel:+905551942780" class="btn btn-call">
                 <i class="fa-solid fa-phone"></i> Hemen Ara: 0555 194 27 80
             </a>
-            <a href="https://www.google.com/maps/search/Gaziantep+Araç+Muayene+İstasyonu" target="_blank" class="btn btn-map">
-                <i class="fa-solid fa-map-location-dot"></i> Haritada Yol Tarifi Al
+            <a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" class="btn btn-map">
+                <i class="fa-solid fa-diamond-turn-right fa-lg"></i> Yol Tarifi Başlat (Navigasyon)
             </a>
         </div>
     </div>
 
-    <!-- Hizmetler Kartı -->
+    <!-- Hizmetler -->
     <div class="card">
         <h2><i class="fa-solid fa-shield-halved" style="color:var(--accent);"></i> Hizmetlerimiz</h2>
         <ul class="service-list">
             <li><i class="fa-solid fa-circle-check"></i> <strong>İslami Usullere Uygun Kesim:</strong> Hijyenik ortamda dini şartlara tam uygun ücretsiz kesim.</li>
-            <li><i class="fa-solid fa-circle-check"></i> <strong>Parçalama & Paketleme:</strong> Paylama, hisse ayırma ve temiz paketleme.</li>
-            <li><i class="fa-solid fa-circle-check"></i> <strong>Görüntülü Vekalet:</strong> Gelemeyen müşterilerimiz için video kayıtlı kesim imkanı.</li>
-            <li><i class="fa-solid fa-circle-check"></i> <strong>Küçükbaş Çeşitleri:</strong> Toklu, koç ve koyun seçenekleri.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Parçalama & Paketleme:</strong> İsteğe göre paylama, hisse ayırma ve poşetleme.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Görüntülü / Vekaleten Kesim:</strong> Gelemeyenler için video kayıtlı ve canlı bağlantılı vekalet.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Canlı Küçükbaş Seçenekleri:</strong> Her bütçeye uygun sağlıklı toklu, koç ve koyun çeşitleri.</li>
         </ul>
     </div>
 
-    <!-- Konum Kartı -->
+    <!-- Tesis Konumu -->
     <div class="card">
-        <h2><i class="fa-solid fa-location-dot" style="color:var(--accent);"></i> Adres & Ulaşım</h2>
+        <h2><i class="fa-solid fa-location-dot" style="color:var(--accent);"></i> Tesis Konumu</h2>
         <div class="address-box">
-            Araç Muayene İstasyonu Civarı, Şehitkamil / Gaziantep
+            Barak Adakçılık Kesim & Satış Yeri, Şehitkamil / Gaziantep
         </div>
+        <a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" class="btn btn-map" style="padding: 12px; font-size: 0.95rem;">
+            <i class="fa-solid fa-location-arrow"></i> Google Haritalar'da Aç
+        </a>
     </div>
 
 </div>
