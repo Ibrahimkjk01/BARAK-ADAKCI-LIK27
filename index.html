@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barak Adakçılık | Gaziantep Adak ve Kurban Kesim Satış Merkezi</title>
-    <meta name="description" content="Gaziantep Barak Adakçılık - İslami usullere uygun ücretsiz kesim, paylama, paketleme ve vekaleten kurban kesim merkezi.">
+    <meta name="description" content="Gaziantep Barak Adakçılık - İslami usullere uygun ücretsiz kesim, paylama, paketleme ve vekaleten kurbanlık merkezi.">
+    
+    <!-- Google Fonts: Montserrat & Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome İkon Kütüphanesi -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --top-dark: #12163b;
-            --main-navy: #191f58;
-            --main-blue: #0f1642;
+            --top-dark: #0f1330;
+            --main-navy: #151a44;
+            --deep-navy: #0d102d;
             --accent-red: #ea2e3e;
             --accent-red-hover: #c91e2d;
             --whatsapp-green: #25d366;
-            --text-dark: #22252a;
-            --text-muted: #6c757d;
-            --bg-light: #f4f6f9;
-            --border-light: #e5e8ed;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --border-light: #e2e8f0;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
 
@@ -36,25 +40,27 @@
             background-color: #ffffff;
             color: var(--text-dark);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6, .brand-font {
             font-family: 'Montserrat', sans-serif;
-        }
-
-        /* 1. EN ÜST BİLGİ BARI (TOP BAR) */
-        .top-bar {
-            background-color: var(--top-dark);
-            color: #d1d5db;
-            font-size: 0.82rem;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-weight: 700;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* --- 1. EN ÜST BİLGİ BARI (TOP BAR) --- */
+        .top-bar {
+            background-color: var(--top-dark);
+            color: #d1d5db;
+            font-size: 0.82rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .top-bar-inner {
@@ -77,7 +83,7 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: color 0.2s;
+            transition: color 0.2s ease;
         }
 
         .top-bar a:hover {
@@ -88,11 +94,11 @@
             color: var(--accent-red);
         }
 
-        /* 2. ANA HEADER (LOGO & İLETİŞİM KUTULARI) */
+        /* --- 2. ANA HEADER (LOGO & WIDGETLAR) --- */
         .main-header {
             background-color: var(--main-navy);
             color: white;
-            padding: 18px 0;
+            padding: 16px 0;
         }
 
         .main-header-inner {
@@ -103,26 +109,25 @@
             flex-wrap: wrap;
         }
 
-        /* Logo Rozet */
-        .logo-box {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
         .logo-badge {
             background: linear-gradient(135deg, #1e7e34, #155724);
-            border: 3px solid #28a745;
-            padding: 8px 16px;
-            border-radius: 25px;
+            border: 2px solid #28a745;
+            padding: 8px 18px;
+            border-radius: 30px;
             color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 800;
-            font-size: 1.35rem;
+            font-size: 1.3rem;
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+            text-decoration: none;
+            transition: transform 0.25s ease;
+        }
+
+        .logo-badge:hover {
+            transform: scale(1.02);
         }
 
         .logo-badge span {
@@ -151,18 +156,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: #ffffff;
         }
 
         .info-widget-text .title {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: #a5b4fc;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .info-widget-text .subtitle {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 700;
             color: #ffffff;
         }
@@ -170,16 +175,16 @@
         .btn-header-cta {
             background-color: var(--accent-red);
             color: white;
-            padding: 12px 24px;
+            padding: 12px 22px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             display: inline-flex;
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 14px rgba(234, 46, 62, 0.35);
-            transition: all 0.25s;
+            transition: all 0.25s ease;
         }
 
         .btn-header-cta:hover {
@@ -187,10 +192,10 @@
             transform: translateY(-2px);
         }
 
-        /* 3. BEYAZ MENÜ ÇUBUĞU (NAVBAR) */
+        /* --- 3. BEYAZ NAVBAR MENÜSÜ --- */
         .navbar {
             background-color: #ffffff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 999;
@@ -206,7 +211,7 @@
             list-style: none;
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 24px;
             margin: 0;
             padding: 0;
         }
@@ -216,9 +221,9 @@
             padding: 18px 0;
             color: var(--text-dark);
             text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: color 0.2s;
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: color 0.2s ease;
             position: relative;
         }
 
@@ -229,12 +234,12 @@
         .nav-socials {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .nav-socials a {
-            width: 36px;
-            height: 36px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             border: 1px solid var(--border-light);
             display: flex;
@@ -242,21 +247,22 @@
             justify-content: center;
             color: #4b5563;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.2s;
+            font-size: 0.88rem;
+            transition: all 0.25s ease;
         }
 
         .nav-socials a:hover {
             background-color: var(--accent-red);
             color: white;
             border-color: var(--accent-red);
+            transform: translateY(-2px);
         }
 
-        /* 4. BANNER & HERO ALANI */
+        /* --- 4. BANNER / HERO ALANI --- */
         .page-banner {
-            background: linear-gradient(rgba(18, 22, 59, 0.75), rgba(18, 22, 59, 0.85)), 
+            background: linear-gradient(rgba(15, 19, 48, 0.8), rgba(15, 19, 48, 0.85)), 
                         url('https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            padding: 70px 0;
+            padding: 65px 0;
             color: white;
         }
 
@@ -276,22 +282,22 @@
 
         .title-bar {
             width: 5px;
-            height: 48px;
+            height: 44px;
             background-color: var(--accent-red);
             border-radius: 3px;
         }
 
         .banner-title h1 {
-            font-size: 2.2rem;
+            font-size: 2.1rem;
             font-weight: 800;
             letter-spacing: -0.5px;
         }
 
         .banner-breadcrumb {
             background-color: var(--accent-red);
-            padding: 12px 24px;
+            padding: 10px 22px;
             border-radius: 30px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             display: inline-flex;
             align-items: center;
@@ -304,9 +310,9 @@
             text-decoration: none;
         }
 
-        /* 5. İÇERİK & HİZMET KATEGORİLERİ */
+        /* --- 5. ANA İÇERİK & HİZMETLER --- */
         .main-content {
-            padding: 60px 0;
+            padding: 55px 0 70px;
             background-color: var(--bg-light);
         }
 
@@ -320,14 +326,14 @@
             background: #ffffff;
             border-radius: 12px;
             padding: 35px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             border: 1px solid var(--border-light);
         }
 
         .content-card h2 {
-            font-size: 1.6rem;
+            font-size: 1.55rem;
             color: var(--main-navy);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             font-weight: 800;
             border-bottom: 2px solid var(--border-light);
             padding-bottom: 12px;
@@ -344,43 +350,38 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 1.05rem;
-            font-weight: 600;
+            font-size: 0.98rem;
+            font-weight: 500;
         }
 
         .service-list-styled li i {
             color: #28a745;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
         }
 
-        /* Yan Sidebar / Hizmet Kategorileri */
         .sidebar-card {
             background: #ffffff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             border: 1px solid var(--border-light);
         }
 
         .sidebar-header {
             background-color: var(--main-navy);
             color: white;
-            padding: 20px 25px;
+            padding: 18px 22px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .sidebar-header h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-
-        .sidebar-header i.bar-icon {
-            color: var(--accent-red);
         }
 
         .category-menu {
@@ -391,41 +392,213 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 25px;
+            padding: 15px 22px;
             color: var(--text-dark);
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.92rem;
             border-bottom: 1px solid var(--border-light);
-            transition: all 0.2s;
+            transition: all 0.2s ease;
         }
 
         .category-menu li a:hover {
             background-color: #f8fafc;
             color: var(--accent-red);
-            padding-left: 30px;
+            padding-left: 28px;
         }
 
         .sidebar-contact-box {
-            background: linear-gradient(135deg, var(--main-navy), var(--main-blue));
+            background: linear-gradient(135deg, var(--main-navy), var(--deep-navy));
             color: white;
-            padding: 30px 25px;
+            padding: 28px 22px;
             border-radius: 12px;
-            margin-top: 25px;
+            margin-top: 24px;
             text-align: center;
         }
 
         .sidebar-contact-box h4 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
         }
 
         .sidebar-contact-box p {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: #c7d2fe;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
-        /* 6. SABİT ALT İLETİŞİM BUTONLARI (SOL ALT KÖŞE) */
+        /* --- 6. KURUMSAL BÜYÜK FOOTER (EKRAN GÖRÜNTÜSÜNDEKİ) --- */
+        .corporate-footer {
+            background: linear-gradient(rgba(10, 13, 33, 0.94), rgba(10, 13, 33, 0.98)),
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: #cbd5e1;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: #ffffff;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        /* Kırmızı Çizgili Başlık Vurgusu */
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 45px;
+            height: 3px;
+            background-color: var(--accent-red);
+            border-radius: 2px;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            color: #94a3b8;
+        }
+
+        .footer-col .read-more {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .footer-col .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .footer-menu {
+            list-style: none;
+        }
+
+        .footer-menu li {
+            margin-bottom: 12px;
+        }
+
+        .footer-menu li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .footer-menu li a:hover {
+            color: var(--accent-red);
+            transform: translateX(5px);
+        }
+
+        .footer-menu li a i {
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+
+        .contact-list-footer {
+            list-style: none;
+        }
+
+        .contact-list-footer li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .contact-list-footer i {
+            color: var(--accent-red);
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+
+        .contact-list-footer .c-title {
+            font-weight: 700;
+            color: #ffffff;
+            display: block;
+        }
+
+        .contact-list-footer .c-desc {
+            color: #94a3b8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .footer-bottom-socials {
+            display: flex;
+            gap: 8px;
+        }
+
+        .footer-bottom-socials a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.25s ease;
+        }
+
+        .footer-bottom-socials a:hover {
+            background-color: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        /* --- 7. YUKARI ÇIK & SOL SABİT BUTONLAR --- */
+        .btn-scroll-top {
+            width: 44px;
+            height: 44px;
+            background-color: var(--accent-red);
+            color: white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.25s ease;
+        }
+
+        .btn-scroll-top:hover {
+            background-color: var(--accent-red-hover);
+            transform: translateY(-3px);
+        }
+
         .fixed-call-tab {
             position: fixed;
             bottom: 75px;
@@ -440,9 +613,9 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 4px 15px rgba(234, 46, 62, 0.4);
+            box-shadow: 0 4px 18px rgba(234, 46, 62, 0.4);
             z-index: 9999;
-            transition: transform 0.2s;
+            transition: transform 0.2s ease;
         }
 
         .fixed-call-tab:hover {
@@ -463,47 +636,29 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
             z-index: 9999;
-            transition: transform 0.2s;
+            transition: transform 0.2s ease;
         }
 
         .fixed-wa-tab:hover {
             transform: scale(1.05);
         }
 
-        /* FOOTER */
-        footer {
-            background-color: var(--top-dark);
-            color: #9ca3af;
-            padding: 30px 0;
-            text-align: center;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        footer p {
-            margin-bottom: 8px;
-        }
-
-        footer a {
-            color: var(--accent-red);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Mobil Uyum */
+        /* Mobil Responsive */
         @media (max-width: 900px) {
             .content-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
             .nav-links { display: none; }
             .header-widgets { display: none; }
             .banner-inner { flex-direction: column; align-items: flex-start; }
+            .footer-bottom { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-<!-- 1. EN ÜST BİLGİ BARI (TOP BAR) -->
+<!-- 1. EN ÜST BİLGİ BARI -->
 <div class="top-bar">
     <div class="container top-bar-inner">
         <div class="top-left">
@@ -521,16 +676,13 @@
 <!-- 2. ANA HEADER -->
 <header class="main-header">
     <div class="container main-header-inner">
-        <!-- Logo -->
         <a href="#" class="logo-box">
             <div class="logo-badge">
                 <i class="fa-solid fa-cow"></i> BARAK <span>ADAKÇILIK</span>
             </div>
         </a>
 
-        <!-- Sağ Taraf İletişim Kutuları -->
         <div class="header-widgets">
-            <!-- WhatsApp Kutusu -->
             <a href="https://wa.me/905303712778?text=Merhaba,%20adaklık%20fiyatları%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="info-widget">
                 <div class="info-widget-icon">
                     <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
@@ -541,7 +693,6 @@
                 </div>
             </a>
 
-            <!-- Destek / Hizmet Kutusu -->
             <div class="info-widget">
                 <div class="info-widget-icon">
                     <i class="fa-solid fa-clock-rotate-left"></i>
@@ -552,7 +703,6 @@
                 </div>
             </div>
 
-            <!-- Kırmızı Bize Ulaşın Butonu -->
             <a href="https://wa.me/905303712778" target="_blank" class="btn-header-cta">
                 Bize Ulaşın <i class="fa-solid fa-angle-right"></i>
             </a>
@@ -560,7 +710,7 @@
     </div>
 </header>
 
-<!-- 3. BEYAZ NAVBAR MENÜSÜ -->
+<!-- 3. NAVBAR MENÜSÜ -->
 <nav class="navbar">
     <div class="container navbar-inner">
         <ul class="nav-links">
@@ -580,7 +730,7 @@
     </div>
 </nav>
 
-<!-- 4. BANNER & HERO BÖLÜMÜ -->
+<!-- 4. BANNER BÖLÜMÜ -->
 <section class="page-banner">
     <div class="container banner-inner">
         <div class="banner-title">
@@ -594,14 +744,13 @@
     </div>
 </section>
 
-<!-- 5. İÇERİK VE HİZMET KATEGORİLERİ GRİDİ -->
+<!-- 5. İÇERİK VE KATEGORİLER -->
 <section class="main-content" id="hizmetler">
     <div class="container content-grid">
         
-        <!-- Sol Ana Kart -->
         <div class="content-card">
             <h2>Gaziantep Barak Adakçılık Kesim Merkezi</h2>
-            <p style="font-size: 1.05rem; color: #4b5563; margin-bottom: 20px;">
+            <p style="font-size: 1rem; color: #4b5563; margin-bottom: 20px;">
                 Tesisimizde İslami usullere tam uygun şartlarda, hijyenik kesimhanemizde adaklık, akika, şükür ve vacip kurbanlık hizmeti sunmaktayız. Tesisimizde kesim, yüzme, hisse paylama ve poşetleme işlemleri <strong>tamamen ücretsiz</strong> olarak yapılmaktadır.
             </p>
 
@@ -614,11 +763,10 @@
             </ul>
         </div>
 
-        <!-- Sağ Sidebar / Hizmet Kategorileri -->
         <div class="sidebar-wrap">
             <div class="sidebar-card">
                 <div class="sidebar-header">
-                    <h3><i class="fa-solid fa-bars bar-icon"></i> Hizmet Kategorileri</h3>
+                    <h3><i class="fa-solid fa-bars bar-icon" style="color:var(--accent-red);"></i> Hizmet Kategorileri</h3>
                 </div>
                 <ul class="category-menu">
                     <li><a href="https://wa.me/905303712778">Adaklık Kurban Satışı <i class="fa-solid fa-arrow-right"></i></a></li>
@@ -629,7 +777,6 @@
                 </ul>
             </div>
 
-            <!-- Sidebar İletişim Kutusu -->
             <div class="sidebar-contact-box">
                 <h4>Canlı Hayvanınızı Seçin</h4>
                 <p>Tesisimize gelerek veya WhatsApp'tan görüntülü arayarak hayvanınızı canlı görebilirsiniz.</p>
@@ -642,7 +789,77 @@
     </div>
 </section>
 
-<!-- 6. SOL ALTA SABİTLENMİŞ BUTONLAR -->
+<!-- 6. KURUMSAL FOOTER BÖLÜMÜ -->
+<footer class="corporate-footer" id="hakkimizda">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div class="footer-col">
+                <h3>Barak Adakçılık</h3>
+                <p><strong>Adak ve Kurbanlık Satışı</strong></p>
+                <p>
+                    Gaziantep'te uzun yıllardır siz saygıdeğer müşterilerimize dürüstlük ve hijyen anlayışıyla hizmet sunmaktayız. Güler yüzlü kasap kadromuzla, İslami usullere tam uygun şekilde adak ve kurbanlarınız kesilip ücretsiz paketlenir.
+                </p>
+                <a href="https://wa.me/905303712778" class="read-more">Devamını Oku <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kurumsal</h3>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fa-solid fa-circle-check"></i> Hakkımızda</a></li>
+                    <li><a href="#hizmetler"><i class="fa-solid fa-circle-check"></i> Hizmetlerimiz</a></li>
+                    <li><a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank"><i class="fa-solid fa-circle-check"></i> İletişim & Konum</a></li>
+                    <li><a href="https://www.instagram.com/barakadakcilik/" target="_blank"><i class="fa-solid fa-circle-check"></i> Instagram Hesabımız</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Bize Ulaşın</h3>
+                <ul class="contact-list-footer">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <span class="c-title">E-Posta</span>
+                            <span class="c-desc">info@barakadakcilik.com</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <span class="c-title">Telefon / WhatsApp</span>
+                            <span class="c-desc">0530 371 27 78</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span class="c-title">Adres</span>
+                            <span class="c-desc">Araç Muayene İstasyonu Civarı, Şehitkamil / Gaziantep</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © 2026 Barak Adakçılık. Tüm Hakları Saklıdır.</p>
+            
+            <div class="footer-bottom-socials">
+                <a href="https://www.instagram.com/barakadakcilik/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/905303712778" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="tel:+905303712778" title="Telefon"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://maps.app.goo.gl/ZxLQHpguMnQny57AA" target="_blank" title="Konum"><i class="fa-solid fa-location-dot"></i></a>
+            </div>
+
+            <a href="#" class="btn-scroll-top" title="Yukarı Çık">
+                <i class="fa-solid fa-angle-up"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- 7. SOL ALTA SABİTLENMİŞ BUTONLAR -->
 <a href="tel:+905303712778" class="fixed-call-tab">
     <i class="fa-solid fa-phone"></i> 0530 371 27 78
 </a>
@@ -650,14 +867,6 @@
 <a href="https://wa.me/905303712778?text=Merhaba,%20adaklık%20fiyatları%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="fixed-wa-tab">
     <i class="fa-brands fa-whatsapp fa-lg"></i> WhatsApp ile İletişime Geç
 </a>
-
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <p>© Barak Adakçılık - Gaziantep Kurbanlık & Adaklık Kesim Merkezi</p>
-        <p>Araç Muayene İstasyonu Civarı, Şehitkamil / Gaziantep | <a href="https://www.instagram.com/barakadakcilik/" target="_blank">@barakadakcilik</a></p>
-    </div>
-</footer>
 
 </body>
 </html>
